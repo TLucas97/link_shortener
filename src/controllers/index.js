@@ -36,7 +36,7 @@ const postUrl = async (req, res) => {
 
     res.json({
         status: 200,
-        tinyUrl: `http://${hostname}/api/${result}`,
+        tinyUrl: `${hostname}/api/${result}`,
     })
 }
 
@@ -75,7 +75,7 @@ const getAllUrls = async (req, res) => {
             url: item.url,
             tinyUrl: item.tiny_url,
             timestamp: item.timestamp,
-            redirectUrl: `http://${hostname}/api/${item.tiny_url}`,
+            redirectUrl: `${hostname}/api/${item.tiny_url}`,
             name: domainName,
         }
     })
