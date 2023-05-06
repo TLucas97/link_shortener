@@ -24,7 +24,6 @@ const postUrl = async (req, res) => {
 
     const nanoid = customAlphabet('1234567890abcdef', 10)
     const result = nanoid(5)
-    const hostname = req.hostname
 
     const urlBody = {
         url,
@@ -36,7 +35,7 @@ const postUrl = async (req, res) => {
 
     res.json({
         status: 200,
-        tinyUrl: `${hostname}/api/${result}`,
+        tinyUrl: result,
     })
 }
 
